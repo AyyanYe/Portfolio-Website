@@ -25,7 +25,6 @@ Welcome to my portfolio website repository! This website was designed and built 
 - [Customization](#customization)
 - [Deployment](#deployment)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Technologies Used
 
@@ -106,7 +105,3 @@ To deploy this website to a hosting platform like Netlify, Vercel, or GitHub Pag
 ## Contributing
 
 Contributions, bug reports, and feature requests are welcome! If you'd like to contribute to this project, please follow the standard GitHub fork and pull request workflow.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details. You are free to use, modify, and distribute this code for your own portfolio website.
