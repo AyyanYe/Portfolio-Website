@@ -20,11 +20,17 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import solidity from "./tech/solidity.png";
+import react_native from "./tech/react-native.png";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
+// import meta from "./company/meta.png";
+// import shopify from "./company/shopify.png";
+// import starbucks from "./company/starbucks.png";
+// import tesla from "./company/tesla.png";
+import nixor from "./company/nixor.jpg";
+import upwork from "./company/Upwork.svg";
+import pip from "./company/pip.png";
+import ke from "./company/ke.png";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -52,10 +58,16 @@ export {
   tailwind,
   typescript,
   threejs,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
+  solidity,
+  react_native,
+  // meta,
+  ke,
+  nixor,
+  pip,
+  upwork,
+  // shopify,
+  // starbucks,
+  // tesla,
   carrent,
   jobit,
   tripguide,
