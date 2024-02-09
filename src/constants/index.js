@@ -48,7 +48,7 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "MERN Stack Developer",
     icon: web,
   },
   {
@@ -56,7 +56,7 @@ const services = [
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "Django Developer",
     icon: backend,
   },
   {
@@ -158,7 +158,7 @@ const experiences = [
     company_name: "Upwork",
     icon: upwork,
     iconBg: "#E6DEDD",
-    date: "Nov 2022 - Mar 2023",
+    date: "Nov 2022 - Dec 2023",
     points: [
       "Worked on various web development projects for clients across different industries.",
       "Utilized HTML, CSS, JavaScript, and modern frameworks (e.g., React.js) to build interactive and responsive user interfaces.",
@@ -184,7 +184,7 @@ const experiences = [
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Revamped real estate platforms’ front-end with cross-browser compatible HTML, CSS, JavaScript and React, resulting in 20% boost in user engagement and browsing experience.",
+      "Revamped real estate platforms’s front-end with cross-browser compatible HTML, CSS, JavaScript and React, resulting in 20% boost in user engagement and browsing experience.",
       "Optimized the property listing search functionality using memoization, resulting in a 20% increase in user efficiency and a 15% reduction in page load time.",
       "Improved the method for handling property images using custom JavaScript solutions, leading to 10% decrease in page load time and increase in the efficiency of adding new listings.",
     ],
@@ -296,30 +296,78 @@ const projects = [
       "https://github.com/AyyanYe/Ballot-System--Smart-Contract-",
   },
   {
-    name: "Radio/Music App in React Native",
+    name: "Simple Landing Page",
     description:
-      "A React Native mobile app that lets users listen to music and stream radio broadcasts. The process involved designing a stunning music player, implementing music streaming, radio streaming, and various music app functionalities.",
+      "A nerfed version of a simple landing page that was desgigned for a client. I don't usually post things that are owned by my clients, but this client was kind enough to allow me to use this to showcase my skills :)",
     tags: [
       {
-        name: "upcoming",
+        name: "HTML",
         color: "blue-text-gradient",
       },
       {
-        name: "react-native",
+        name: "TailwindCSS",
         color: "green-text-gradient",
       },
       {
-        name: "firebase",
+        name: "VanillaJS",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: tripguide,
+    source_code_link:
+      "https://github.com/AyyanYe/manage-landing-page",
+  },
+  {
+    name: "AI SaaS",
+    description:
+      "This is probably the single greatest thing that I have ever build. Initially, a client asked me to do this. However, along the way I loved it so much that I decided to make two versions of it and keep one for my portfolio (which was approved by the client). The app was build using NextJS, it uses OpenAI APIs and Replicate APIs to generate content. Moreover, it uses a Clerk Authentication System, RadixUI Components plus some custom components. Lastly, the database was a Supabase PostgreSQL database and threeJS was used to render 3D components.",
+    tags: [
+      {
+        name: "NextJS",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "TailwindCSS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "OpenAI",
         color: "pink-text-gradient",
       },
       {
-        name: "figma",
+        name: "Prisma",
         color: "white-text-gradient",
       },
     ],
     image: tripguide,
     source_code_link:
-      "https://github.com/AyyanYe",
+      "https://github.com/AyyanYe/restaurant-app",
+  },
+  {
+    name: "Little Lemon Restaurant App",
+    description:
+      "This restaurant app, built using React Native and Expo, is designed to streamline the dining experience by allowing users to explore restaurants, view menus, and place orders conveniently.",
+    tags: [
+      {
+        name: "React Native",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "CSS3",
+        color: "green-text-gradient",
+      },
+      {
+        name: "JavaScript",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Expo",
+        color: "white-text-gradient",
+      },
+    ],
+    image: tripguide,
+    source_code_link:
+      "https://github.com/AyyanYe/restaurant-app",
   },
 ];
 
