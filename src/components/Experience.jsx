@@ -5,6 +5,7 @@ import { styles } from "../styles";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
+import React from 'react';
 
 const ExperienceCard = ({ experience }) => (
   <VerticalTimelineElement contentStyle={{ background: '#1D1836', color: '#FFF' }}
@@ -41,11 +42,11 @@ const ExperienceCard = ({ experience }) => (
 
 const Experience = () => {
   return (
-    <>
-      {/* <motion.div variants={textVariant()}> */}
-      <p className={styles.sectionSubText}>What I have done so far</p>
-      <h2 className={styles.sectionHeadText}>Work Experience.</h2>
-      {/* </motion.div> */}
+    <React.Fragment>
+      <motion.div variants={textVariant()}>
+        <p className={styles.sectionSubText}>What I have done so far</p>
+        <h2 className={styles.sectionHeadText}>Work Experience.</h2>
+      </motion.div>
 
       <div className="mt-20 flex flex-col">
         <VerticalTimeline>
@@ -54,7 +55,7 @@ const Experience = () => {
           ))}
         </VerticalTimeline>
       </div>
-    </>
+    </React.Fragment>
   )
 }
 
