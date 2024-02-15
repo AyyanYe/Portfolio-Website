@@ -29,6 +29,12 @@ import {
   jobit,
   tripguide,
   threejs,
+  LandingPage,
+  Ballot,
+  aimage,
+  ResApp,
+  littlelemon,
+  Cryp,
 } from "../assets";
 
 export const navLinks = [
@@ -241,8 +247,34 @@ const projects = [
         color: "white-text-gradient",
       },
     ],
-    image: carrent,
+    image: Cryp,
     source_code_link: "https://github.com/AyyanYe/Encryption-Project",
+  },
+  {
+    name: "AI SaaS",
+    description:
+      "This is probably the single greatest thing that I have ever build. Initially, a client asked me to do this. However, along the way I loved it so much that I decided to make two versions of it and keep one for my portfolio (which was approved by the client). The app was build using NextJS, it uses OpenAI APIs and Replicate APIs to generate content. Moreover, it uses a Clerk Authentication System, RadixUI Components plus some custom components. Lastly, the database was a Supabase PostgreSQL database and threeJS was used to render 3D components.",
+    tags: [
+      {
+        name: "NextJS",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "TailwindCSS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "OpenAI",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Prisma",
+        color: "white-text-gradient",
+      },
+    ],
+    image: aimage,
+    source_code_link:
+      "https://github.com/AyyanYe/restaurant-app",
   },
   {
     name: "Little Lemon Booking Website",
@@ -266,7 +298,7 @@ const projects = [
         color: "white-text-gradient",
       },
     ],
-    image: jobit,
+    image: littlelemon,
     source_code_link: "https://github.com/AyyanYe/Project-Capstone",
   },
   {
@@ -291,7 +323,7 @@ const projects = [
         color: "white-text-gradient",
       },
     ],
-    image: tripguide,
+    image: Ballot,
     source_code_link:
       "https://github.com/AyyanYe/Ballot-System--Smart-Contract-",
   },
@@ -313,35 +345,9 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
+    image: LandingPage,
     source_code_link:
       "https://github.com/AyyanYe/manage-landing-page",
-  },
-  {
-    name: "AI SaaS",
-    description:
-      "This is probably the single greatest thing that I have ever build. Initially, a client asked me to do this. However, along the way I loved it so much that I decided to make two versions of it and keep one for my portfolio (which was approved by the client). The app was build using NextJS, it uses OpenAI APIs and Replicate APIs to generate content. Moreover, it uses a Clerk Authentication System, RadixUI Components plus some custom components. Lastly, the database was a Supabase PostgreSQL database and threeJS was used to render 3D components.",
-    tags: [
-      {
-        name: "NextJS",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "TailwindCSS",
-        color: "green-text-gradient",
-      },
-      {
-        name: "OpenAI",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "Prisma",
-        color: "white-text-gradient",
-      },
-    ],
-    image: tripguide,
-    source_code_link:
-      "https://github.com/AyyanYe/restaurant-app",
   },
   {
     name: "Little Lemon Restaurant App",
@@ -365,7 +371,7 @@ const projects = [
         color: "white-text-gradient",
       },
     ],
-    image: tripguide,
+    image: ResApp,
     source_code_link:
       "https://github.com/AyyanYe/restaurant-app",
   },

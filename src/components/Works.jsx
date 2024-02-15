@@ -5,7 +5,7 @@ import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const ProjectCard = ({
   index,
@@ -15,7 +15,17 @@ const ProjectCard = ({
   image,
   source_code_link,
 }) => {
-  const [expanded, setExpanded] = useState(screen.width <= 768)
+  const [expanded, setExpanded] = useState(false); // Set initial state to false
+
+  // Use useEffect to set expanded state based on screen width
+  useEffect(() => {
+    const handleResize = () => {
+      setExpanded(window.innerWidth <= 768);
+    };
+    handleResize(); // Call on initial render
+    window.addEventListener('resize', handleResize); // Listen for screen size changes
+    return () => window.removeEventListener('resize', handleResize); // Cleanup
+  }, []);
 
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
@@ -98,4 +108,4 @@ const Works = () => {
   );
 };
 
-export default SectionWrapper(Works, "");
+export default SectionWrapper(Works, "Projects");

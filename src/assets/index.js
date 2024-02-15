@@ -35,6 +35,12 @@ import ke from "./company/ke.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import LandingPage from "./LandingPage.png";
+import Ballot from "./Ballot.png";
+import ResApp from "./ResApp.jpg";
+import aimage from "./aimage.png";
+import littlelemon from "./screencapture-little-lemon-booking-website-vercel-app-2024-02-16-02_49_02.png";
+import Cryp from "./Crypto.png"
 
 export {
   logo,
@@ -71,4 +77,10 @@ export {
   carrent,
   jobit,
   tripguide,
+  LandingPage,
+  Ballot,
+  aimage,
+  ResApp,
+  littlelemon,
+  Cryp,
 };
