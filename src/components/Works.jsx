@@ -55,8 +55,8 @@ const ProjectCard = ({
 
         <div className="mt-5">
           <h3 className="text-white font-bold text-[24px]">{name}</h3>
-          <p className="mt-2 text-secondary text-[14px]">{!expanded ? description : description.substring(0, 50)}</p>
-          <button className="md:hidden" onClick={() => setExpanded(!expanded)}>{!expanded ? 'Read Less' : 'Read More'}</button>
+          <p className="mt-2 text-secondary text-[14px] max-sm:hidden">{!expanded ? description : description.substring(0, 80).trim()}</p>
+          <button className="md:hidden max-sm:hidden" onClick={() => setExpanded(!expanded)}>{!expanded ? 'Read Less' : 'Read More'}</button>
         </div>
 
         <div className="mt-4 flex flex-wrap gap-2">
