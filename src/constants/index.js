@@ -167,18 +167,15 @@ const experiences = [
     date: "Nov 2022 - Dec 2023",
     points: [
       "Worked on various web development projects for clients across different industries.",
-      "Utilized HTML, CSS, JavaScript, and modern frameworks (e.g., React.js) to build interactive and responsive user interfaces.",
       "Collaborated closely with clients to gather project requirements and ensure clear communication throughout the development process.",
       "Implemented custom designs and ensured pixel-perfect accuracy from design mockups to the final product.",
       "Optimized website performance, including page load times and mobile responsiveness, to enhance user experience.",
       "Ensured cross-browser compatibility and addressed any compatibility issues promptly.",
       "Integrated third-party APIs and services to enhance website functionality.",
-      "Managed version control using Git and collaborated with other developers using platforms like GitHub.",
       "Participated in code reviews, providing feedback and recommendations to improve code quality and maintainability.",
       "Delivered projects on time and within budget, meeting or exceeding client expectations.",
       "Maintained and updated existing websites, fixing bugs and implementing feature enhancements.",
       "Managed project timelines, milestones, and client communication to ensure project success.",
-      "Continuously improved skills and stayed up-to-date with the latest web development trends and technologies.",
     ],
   },
   {
@@ -228,7 +225,7 @@ const projects = [
   {
     name: "Cryptography Algorithms in C++",
     description:
-      "This repository contains C++ implementations of three fundamental cryptography algorithms: DES (Data Encryption Standard), RSA (Rivest–Shamir–Adleman), and Caesar's Cipher. These algorithms are widely used in information security and encryption, and this repository provides simple yet functional implementations for educational and reference purposes.",
+      "This repository contains C++ implementations of three fundamental cryptography algorithms: DES (Data Encryption Standard), RSA (Rivest–Shamir–Adleman), and Caesar's Cipher.",
     tags: [
       {
         name: "cryptography",
@@ -253,7 +250,7 @@ const projects = [
   {
     name: "AI SaaS",
     description:
-      "This is probably the single greatest thing that I have ever build. Initially, a client asked me to do this. However, along the way I loved it so much that I decided to make two versions of it and keep one for my portfolio (which was approved by the client). The app was build using NextJS, it uses OpenAI APIs and Replicate APIs to generate content. Moreover, it uses a Clerk Authentication System, RadixUI Components plus some custom components. Lastly, the database was a Supabase PostgreSQL database and threeJS was used to render 3D components.",
+      "The app was build using NextJS, it uses OpenAI APIs and Replicate APIs to generate content. Moreover, it uses a Clerk Authentication System, RadixUI Components plus some custom components. Lastly, the database was a Supabase PostgreSQL database and threeJS was used to render 3D components.",
     tags: [
       {
         name: "NextJS",
@@ -330,7 +327,7 @@ const projects = [
   {
     name: "Simple Landing Page",
     description:
-      "A nerfed version of a simple landing page that was desgigned for a client. I don't usually post things that are owned by my clients, but this client was kind enough to allow me to use this to showcase my skills :)",
+      "A nerfed version of a simple landing page that was designed for a client. I don't usually post things that are owned by my clients, but this client was kind enough to allow me to use this to showcase my skills :)",
     tags: [
       {
         name: "HTML",
