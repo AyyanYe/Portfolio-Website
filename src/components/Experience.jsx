@@ -5,40 +5,72 @@ import { styles } from "../styles";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
-import React from 'react';
+import React, { useState } from 'react';
 
-const ExperienceCard = ({ experience }) => (
-  <VerticalTimelineElement contentStyle={{ background: '#1D1836', color: '#FFF' }}
-    contentArrowStyle={{ borderRight: '7px solid #232631' }}
-    date={experience.date}
-    iconStyle={{ background: experience.iconBg }}
-    icon={
-      <div className="flex justify-center items-center w-full h-full">
-        <img
-          src={experience.icon}
-          alt={experience.company_name}
-          className="w-[60px] h-[60%] object-contain"
-        />
+const ExperienceCard = ({ experience }) => {
+  const [showMore, setShowMore] = useState(false);
+  const maxPointsToShow = 3;  // Adjust this value to control the initial number of points displayed
+
+  const displayedPoints = showMore ? experience.points : experience.points.slice(0, maxPointsToShow);
+
+  const handleSeeMoreClick = () => {
+    setShowMore(true);
+  };
+
+  const handleSeeLessClick = () => {
+    setShowMore(false);
+  };
+
+  return (
+    <VerticalTimelineElement
+      contentStyle={{ background: '#1D1836', color: '#FFF' }}
+      contentArrowStyle={{ borderRight: '7px solid #232631' }}
+      date={experience.date}
+      iconStyle={{ background: experience.iconBg }}
+      icon={
+        <div className="flex justify-center items-center w-full h-full">
+          <img
+            src={experience.icon}
+            alt={experience.company_name}
+            className="w-[60px] h-[60%] object-contain"
+          />
+        </div>
+      }
+    >
+      <div>
+        <h3 className="text-white text-[24px] font-bold">
+          {experience.title}
+        </h3>
+        <p className="text-secondary text-[16px] font-semibold" style={{ margin: 0 }}>
+          {experience.company_name}
+        </p>
       </div>
-    }
-  >
-    <div>
-      <h3 className="text-white text-[24px] font-bold">
-        {experience.title}
-      </h3>
-      <p className="text-secondary text-[16px] font-semibold" style={{ margin: 0 }}>
-        {experience.company_name}
-      </p>
-    </div>
-    <ul className="mt-5 list-disc ml-5 space-y-2">
-      {experience.points.map((point, index) => (
-        <li key={`experience-point-${index}`} className="text-white-100 text-[14px] pl-1 tracking-wider">
-          {point}
-        </li>
-      ))}
-    </ul>
-  </VerticalTimelineElement>
-)
+      <ul className="mt-5 list-disc ml-5 space-y-2">
+        {displayedPoints.map((point, index) => (
+          <li key={`experience-point-${index}`} className="text-white-100 text-[14px] pl-1 tracking-wider">
+            {point}
+          </li>
+        ))}
+        {experience.points.length > maxPointsToShow && (
+          <div className="flex justify-end">
+            <button
+              className={`text-white-100 text-[14px] pl-1 tracking-wider hover:text-primary ${showMore ? 'hidden' : ''}`}
+              onClick={handleSeeMoreClick}
+            >
+              See More ({experience.points.length - maxPointsToShow} remaining)
+            </button>
+            <button
+              className={`text-white-100 text-[14px] pl-1 tracking-wider hover:text-primary ${!showMore ? 'hidden' : ''}`}
+              onClick={handleSeeLessClick}
+            >
+              See Less
+            </button>
+          </div>
+        )}
+      </ul>
+    </VerticalTimelineElement>
+  );
+};
 
 const Experience = () => {
   return (
@@ -58,7 +90,7 @@ const Experience = () => {
         </VerticalTimeline>
       </div>
     </React.Fragment>
-  )
-}
+  );
+};
 
 export default SectionWrapper(Experience, "work");

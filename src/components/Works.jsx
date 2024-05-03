@@ -15,7 +15,7 @@ const ProjectCard = ({
   image,
   source_code_link,
 }) => {
-  const [expanded, setExpanded] = useState(false); // Set initial state to false
+  const [expanded, setExpanded] = useState(window.innerWidth > 768); // Set initial state to false
 
   // Use useEffect to set expanded state based on screen width
   useEffect(() => {
@@ -32,17 +32,19 @@ const ProjectCard = ({
       <Tilt
         options={{ max: 45, scale: 1, speed: 450 }}
         className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
+        disabled={window.innerWidth <= 768}
       >
         <div className="relative w-full h-[230px]">
           <img
             src={image}
             alt={name}
+            srcSet={`${image} 300w, ${image} 600w, ${image} 1000w`} // Provide multiple image sizes
             className="w-full h-full object-cover rounded-2xl"
           />
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
             <div
               onClick={() => window.open(source_code_link, "_blank")}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer z-50 bottom-2 right-2"
             >
               <img
                 src={github}
@@ -55,8 +57,15 @@ const ProjectCard = ({
 
         <div className="mt-5">
           <h3 className="text-white font-bold text-[24px]">{name}</h3>
-          <p className="mt-2 text-secondary text-[14px] max-sm:hidden">{!expanded ? description : description.substring(0, 80).trim()}</p>
-          <button className="md:hidden max-sm:hidden" onClick={() => setExpanded(!expanded)}>{!expanded ? 'Read Less' : 'Read More'}</button>
+          <p className="mt-2 text-secondary text-[14px] last:overflow-wrap: break-word">
+            {!expanded ? description : description.substring(0, 80).trim()}
+          </p>
+          <button
+            className="md:hidden" // Added md:hidden class
+            onClick={() => setExpanded(!expanded)}
+          >
+            {!expanded ? 'Read Less' : 'Read More'}
+          </button>
         </div>
 
         <div className="mt-4 flex flex-wrap gap-2">
@@ -99,7 +108,7 @@ const Works = () => {
         </motion.p>
       </div>
 
-      <div className="mt-20 flex flex-wrap gap-7">
+      <div className="mt-20 flex flex-wrap gap-7 min-width-[300px]">  {/* Added min-width */}
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
