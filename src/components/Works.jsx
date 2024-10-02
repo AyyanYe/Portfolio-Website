@@ -6,6 +6,9 @@ import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { useState, useEffect } from "react";
+import PropTypes from 'prop-types';
+
+
 
 const ProjectCard = ({
   index,
@@ -16,6 +19,15 @@ const ProjectCard = ({
   source_code_link,
 }) => {
   const [expanded, setExpanded] = useState(window.innerWidth > 768); // Set initial state to false
+
+  ProjectCard.propTypes = {
+    index: PropTypes.number.isRequired,               // Ensures index is a number and required
+    name: PropTypes.string.isRequired,                // Ensures name is a string and required
+    description: PropTypes.string.isRequired,         // Ensures description is a string and required
+    tags: PropTypes.arrayOf(PropTypes.string).isRequired, // Ensures tags is an array of strings and required
+    image: PropTypes.string.isRequired,               // Ensures image is a string (URL) and required
+    source_code_link: PropTypes.string.isRequired,    // Ensures source_code_link is a string (URL) and required
+  };
 
   // Use useEffect to set expanded state based on screen width
   useEffect(() => {

@@ -23,6 +23,8 @@ import {
   nixor,
   pip,
   upwork,
+  internsLogo,
+  novusLogo,
   // tesla,
   // shopify,
   // carrent,
@@ -72,14 +74,14 @@ const services = [
 ];
 
 const technologies = [
-  {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
+  // {
+  //   name: "HTML 5",
+  //   icon: html,
+  // },
+  // {
+  //   name: "CSS 3",
+  //   icon: css,
+  // },
   {
     name: "JavaScript",
     icon: javascript,
@@ -92,10 +94,10 @@ const technologies = [
     name: "React JS",
     icon: reactjs,
   },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
+  // {
+  //   name: "Redux Toolkit",
+  //   icon: redux,
+  // },
   {
     name: "Tailwind CSS",
     icon: tailwind,
@@ -108,26 +110,26 @@ const technologies = [
     name: "MongoDB",
     icon: mongodb,
   },
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
-    name: "Solidity",
-    icon: solidity,
-  },
+  // {
+  //   name: "Three JS",
+  //   icon: threejs,
+  // },
+  // {
+  //   name: "Solidity",
+  //   icon: solidity,
+  // },
   // {
   //   name: "React Native",
   //   icon: react_native,
   // },
-  {
-    name: "git",
-    icon: git,
-  },
-  {
-    name: "figma",
-    icon: figma,
-  },
+  // {
+  //   name: "git",
+  //   icon: git,
+  // },
+  // {
+  //   name: "figma",
+  //   icon: figma,
+  // },
   // {
   //   name: "docker",
   //   icon: docker,
@@ -164,7 +166,7 @@ const experiences = [
     company_name: "Upwork",
     icon: upwork,
     iconBg: "#E6DEDD",
-    date: "Nov 2022 - Dec 2023",
+    date: "Nov 2022 - Present",
     points: [
       "Worked on various web development projects for clients across different industries.",
       "Collaborated closely with clients to gather project requirements and ensure clear communication throughout the development process.",
@@ -179,17 +181,47 @@ const experiences = [
     ],
   },
   {
-    title: "Front-End Web Developer",
+    title: "Full Stack Web Developer",
     company_name: "Property Investment Point",
     icon: pip,
     iconBg: "#E6DEDD",
-    date: "Apr 2023 - Present",
+    date: "Feb 2023 - Nov 2023",
     points: [
+      "Initially appointed as a FrontEnd Developer, but was promoted to the position of Full Stack Developer within 3 months.",
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
       "Revamped real estate platforms’s front-end with cross-browser compatible HTML, CSS, JavaScript and React, resulting in 20% boost in user engagement and browsing experience.",
       "Optimized the property listing search functionality using memoization, resulting in a 20% increase in user efficiency and a 15% reduction in page load time.",
       "Improved the method for handling property images using custom JavaScript solutions, leading to 10% decrease in page load time and increase in the efficiency of adding new listings.",
+    ],
+  },
+  {
+    title: "Web Developer",
+    company_name: "Interns Pakistan",
+    icon: internsLogo,
+    iconBg: "#239E46",
+    date: "Nov 2023 - Dec 2023",
+    points: [
+      "Built and styled responsive websites using HTML and CSS, ensuring cross-browser compatibility and mobile responsiveness.",
+      "Developed dynamic features and enhanced functionality using JavaScript to improve user interaction and experience.",
+      "Customized and maintained WordPress sites by creating and modifying themes, plugins, and templates using PHP.",
+      "Successfully completed 350+ technical challenges, 5 mini projects, and a capstone project focused on full-cycle web development.",
+      "This program pushed me to deliver high-quality work under tight deadlines, sharpening my problem-solving skills and technical expertise in web development.",
+    ],
+  },
+  {
+    title: "MERN Stack Developer",
+    company_name: "The Novus Tech",
+    icon: novusLogo,
+    iconBg: "#1439BE",
+    date: "Dec 2023 - Aug 2024",
+    points: [
+      "Developed and optimized property listing features using React and Redux, enhancing user experience and increasing engagement on the platform.",
+      "Implemented image upload functionality using AWS S3, improving property image handling and reducing load time by 10% for faster browsing.",
+      "Designed and built RESTful APIs with Node.js and Express.js to handle property data, ensuring efficient data retrieval and manipulation for the front-end application.",
+      "Utilized MongoDB with Mongoose for effective database management, optimizing data storage and access for property listings and user information.",
+      "Collaborated with the UI/UX team to ensure responsive design and seamless navigation, applying HTML, CSS, and JavaScript (ES6+) best practices.",
+      "Participated in code reviews and maintained version control using Git and GitHub, ensuring code quality and team collaboration.",
     ],
   },
 ];

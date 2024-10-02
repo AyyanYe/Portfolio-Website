@@ -31,6 +31,8 @@ import nixor from "./company/nixor.jpg";
 import upwork from "./company/Upwork.svg";
 import pip from "./company/pip.png";
 import ke from "./company/ke.png";
+import internsLogo from "./company/InternsLogo.png";
+import novusLogo from "./company/NovusTechLogo.png";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -71,6 +73,8 @@ export {
   nixor,
   pip,
   upwork,
+  internsLogo,
+  novusLogo,
   // shopify,
   // starbucks,
   // tesla,

@@ -3,6 +3,7 @@ import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 import { testimonials } from "../constants";
+import PropTypes from 'prop-types';
 
 const FeedbackCard = ({
   index,
@@ -16,7 +17,7 @@ const FeedbackCard = ({
     variants={fadeIn("", "spring", index * 0.5, 0.75)}
     className="bg-black-200 p-10 rounded-3xl xs:w-[320px] w-full"
   >
-    <p className="text-white font-black text-[48px]">"</p>
+    <p className="text-white font-black text-[48px]">&quot;</p>
 
     <div className="mt-1">
       <p className="text-white tracking-wider text-[18px]">{testimonial}</p>
@@ -38,6 +39,15 @@ const FeedbackCard = ({
     </div>
   </motion.div>
 );
+
+FeedbackCard.propTypes = {
+  index: PropTypes.number.isRequired,
+  testimonial: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  designation: PropTypes.string.isRequired,
+  company: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+};
 
 const Feedbacks = () => {
   return (

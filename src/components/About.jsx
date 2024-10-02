@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 import { Tilt } from "react-tilt";
 import { motion } from 'framer-motion';
 
@@ -7,20 +7,22 @@ import { services } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
 import { SectionWrapper } from '../hoc';
 
-const ServiceCard = ({ title,icon,index }) => {
+const ServiceCard = ({ title, icon, index }) => {
   return (
-    <Tilt className="xs:w-[250px] w-full">
+    <Tilt
+      options={{
+        max: 45,
+        scale: 1,
+        speed: 450
+      }}
+      className="xs:w-[250px] w-full">
       <motion.div
-       variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
-       className='w-full green-pink-gradient p=[1px] rounded-[20px] shadow-card'
+        variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
+        className='w-full green-pink-gradient p=[1px] rounded-[20px] shadow-card'
       >
         <div
-         options={{
-          max: 45,
-          scale: 1,
-          speed: 450
-         }}
-         className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
+
+          className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
         >
           <img src={icon} alt={title} className='w-16 h-16 object-contain' />
           <h3 className='text-white text-[20px] font-bold text-center'>
@@ -32,36 +34,42 @@ const ServiceCard = ({ title,icon,index }) => {
   )
 }
 
+ServiceCard.propTypes = {
+  title: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
+  index: PropTypes.number.isRequired,
+};
+
 const About = () => {
   return (
     <>
-     <motion.div variants={textVariant()}>
-      <p className={styles.sectionSubText}>Introduction</p>
-      <h2 className={styles.sectionHeadText}>Overview.</h2>
-     </motion.div>
+      <motion.div variants={textVariant()}>
+        <p className={styles.sectionSubText}>Introduction</p>
+        <h2 className={styles.sectionHeadText}>Overview.</h2>
+      </motion.div>
 
-     <motion.p variants={fadeIn("", "", 0.1, 1)}
-     className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
-     >
-     Dedicated and skilled web developer with a strong foundation 
-     in full-stack web development and blockchain technology. 
-     Experienced in creating responsive and user-friendly web 
-     applications using cutting-edge technologies, including 
-     ReactJS, NodeJS, and MongoDB. Proficient in smart contract 
-     development using Solidity for blockchain applications. 
-     Committed to delivering high-quality software solutions that 
-     enhance user experiences and drive business growth. Adept at 
-     optimizing web performance and applying AI models for 
-     data-driven insights. Eager to leverage technical expertise 
-     and creativity to contribute to innovative projects in the web 
-     and blockchain domains.
-     </motion.p>
+      <motion.p variants={fadeIn("", "", 0.1, 1)}
+        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
+      >
+        Dedicated and skilled web developer with a strong foundation
+        in full-stack web development and blockchain technology.
+        Experienced in creating responsive and user-friendly web
+        applications using cutting-edge technologies, including
+        ReactJS, NodeJS, and MongoDB. Proficient in smart contract
+        development using Solidity for blockchain applications.
+        Committed to delivering high-quality software solutions that
+        enhance user experiences and drive business growth. Adept at
+        optimizing web performance and applying AI models for
+        data-driven insights. Eager to leverage technical expertise
+        and creativity to contribute to innovative projects in the web
+        and blockchain domains.
+      </motion.p>
 
-     <div className='mt-20 flex flex-wrap gap-10'>
-      {services.map((service, index)=>(
-        <ServiceCard key={service.title} index={index} {...service} />
-      ))}
-     </div>
+      <div className='mt-20 flex flex-wrap gap-10'>
+        {services.map((service, index) => (
+          <ServiceCard key={service.title} index={index} {...service} />
+        ))}
+      </div>
     </>
   )
 }
