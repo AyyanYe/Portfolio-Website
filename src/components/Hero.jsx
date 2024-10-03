@@ -16,7 +16,8 @@ const Hero = () => {
             Hi, I&apos;m <span className='text-[#915eff]'>Ayyan</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I specialize in front-end development <br className='sm:block hidden' />for web and mobile applications, with <br className='sm:block hidden' />expertise in Solidity for blockchain <br className='sm:block hidden' />solutions.
+            
+            I&apos;m a <span className='text-[#915eff]'>Meta Certified</span> Full-Stack Web Developer <br className='sm:block hidden' />with expertise in MERN Stack, Django <br className='sm:block hidden' />and Web3 technologies.
           </p>
         </div>
       </div>
