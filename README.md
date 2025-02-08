@@ -1,107 +1,111 @@
-<<<<<<< HEAD
-# React + Vite
+# Portfolio Website 🌟
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Open%20Site-brightgreen?style=for-the-badge&logo=netlify)](https://ayyanahmed-portfolio.netlify.app/)
+[![GitHub License](https://img.shields.io/github/license/AyyanYe/Portfolio-Website?style=for-the-badge)](https://github.com/AyyanYe/Portfolio-Website/blob/main/LICENSE)
+[![React](https://img.shields.io/badge/React-18.2.0-%2361DAFB?style=for-the-badge&logo=react)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-4.4.5-%23646CFF?style=for-the-badge&logo=vite)](https://vitejs.dev/)
 
-Currently, two official plugins are available:
+Welcome to my professional portfolio website! This project showcases my technical expertise, projects, and professional journey in a modern, responsive, and interactive format. Built with cutting-edge technologies and designed for performance, it reflects my commitment to clean code and user-centric design.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-=======
-# Portfolio-Website
-Portfolio Website made using React.JS, Tailwind CSS and three.js
->>>>>>> 663cd6f177822ae04d0655da909bad67a5e1e84b
+---
 
-# Portfolio Website
+## 🚀 Features
 
-Welcome to my portfolio website repository! This website was designed and built using React.js, Tailwind CSS, and Three.js, showcasing my skills, projects, and personal information. Whether you're here to learn about my work, contact me, or simply explore, I hope you find it informative and engaging.
+- **Modern UI/UX**: Smooth animations, minimalist design, and responsive layouts.
+- **Dynamic Content**: Projects displayed with filtering capabilities (Web/Mobile/All).
+- **Interactive Elements**: Click-to-copy email, animated transitions, and hover effects.
+- **SEO Optimized**: Meta tags, alt text, and semantic HTML for better search visibility.
+- **Performance**: Optimized assets and lazy loading for fast load times.
 
-## Table of Contents
+---
 
-- [Technologies Used](#technologies-used)
-- [Features](#features)
-- [Getting Started](#getting-started)
-- [Project Structure](#project-structure)
-- [Customization](#customization)
-- [Deployment](#deployment)
-- [Contributing](#contributing)
+## 🛠️ Tech Stack & Skills Showcase
 
-## Technologies Used
+### Core Technologies
+| Category       | Technologies/Libraries                                                                 |
+|----------------|---------------------------------------------------------------------------------------|
+| Frontend       | React 18, Vite 4, JavaScript (ES6+)                                                   |
+| Styling        | CSS3, Flexbox, CSS Grid, Media Queries (Responsive Design)                            |
+| Animations     | Framer Motion, CSS Transitions, Three.js                                              |
+| Tooling        | npm, Git, GitHub, Netlify (Deployment)                                                |
 
-- **React.js**: A popular JavaScript library for building user interfaces.
-- **Tailwind CSS**: A utility-first CSS framework that makes styling easy and responsive.
-- **Three.js**: A powerful 3D graphics library that adds interactive 3D content to the website.
+### Key Libraries
+- **`react-icons`**: Scalable vector icons for consistent UI.
+- **`react-intersection-observer`**: Efficient scroll-based animations.
+- **`react-router-dom`**: Seamless client-side routing.
+- **`react-tilt`**: Interactive hover effects on project cards.
 
-## Features
+---
 
-This portfolio website includes the following features:
+## 📂 Project Structure
 
-- **Home**: A dynamic landing page with a 3D model rendered using Three.js, showcasing my name and profession.
+```bash
+src/
+├── assets/            # Images, fonts, and static files
+├── components/        # Reusable UI components (Header, ProjectCard, etc.)
+├── constants/         # Data constants (projects, skills, social links)
+├── sections/          # Page sections (About, Projects, Contact)
+├── styles/            # Global and component-specific CSS
+├── App.jsx            # Main application component
+└── main.jsx           # Entry point with ReactDOM render
+```
 
-- **About Me**: An informative section about my background, skills, and interests.
+---
 
-- **Projects**: A portfolio of my past and ongoing projects, with descriptions and links to GitHub or live demos.
+## 🌐 Live Deployment
 
-- **Contact**: A contact form allowing visitors to get in touch with me.
+The portfolio is deployed on **Netlify** with CI/CD pipeline for automatic updates:  
+🔗 **Live URL**: [https://ayyanahmed-portfolio.netlify.app/](https://ayyanahmed-portfolio.netlify.app/)
 
-- **Responsive Design**: The website is fully responsive and optimized for various screen sizes.
+![Portfolio Preview](./public/screencapture-ayyanahmed-portfolio-netlify-app-2024-10-26-18_26_24.png)  
 
-## Getting Started
+---
 
-To get a local copy of this project up and running, follow these steps:
+## 🧑💻 Development Setup
 
-1. Clone this repository to your local machine:
-
+1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/portfolio-website.git
+   git clone https://github.com/AyyanYe/Portfolio-Website.git
+   cd Portfolio-Website
    ```
 
-2. Navigate to the project directory:
-
-   ```bash
-   cd portfolio-website
-   ```
-
-3. Install the required dependencies:
-
+2. **Install dependencies**
    ```bash
    npm install
    ```
 
-4. Start the development server:
-
+3. **Run locally**
    ```bash
-   npm start
+   npm run dev
    ```
 
-The website should now be running locally at [http://localhost:3000](http://localhost:3000). You can start making changes to the code and see them in real-time.
+4. **Build for production**
+   ```bash
+   npm run build
+   ```
 
-## Project Structure
+---
 
-The project structure is organized as follows:
+## 📜 License
 
-- `src/`: Contains the source code for the website.
-  - `components/`: React components for different sections of the website.
-  - `pages/`: Individual pages of the website.
-  - `styles/`: Custom CSS styles and Tailwind CSS classes.
-  - `assets/`: Images, fonts, and other assets.
-  - `App.js`: The main React application component.
-  - `index.js`: Entry point of the application.
+This project is licensed under the MIT License - see [LICENSE](LICENSE) for details.
 
-## Customization
+---
 
-You can customize this portfolio website to make it your own:
+## 🤝 Contributing
 
-- **Content**: Replace the default content in the `src` directory with your own information, projects, and images.
+While this is a personal portfolio, constructive feedback is welcome!  
+Please open an issue first to discuss proposed changes.
 
-- **Styling**: Customize the website's appearance by modifying the Tailwind CSS classes and styles in the `src/styles` directory.
+---
 
-- **Three.js Model**: Replace the 3D model in the homepage with your own Three.js scene or model.
+## 📬 Connect With Me
 
-## Deployment
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Ayyan%20Ahmed-%230A66C2?style=flat&logo=linkedin)](https://www.linkedin.com/in/ayyan-ahmed/)
+[![GitHub](https://img.shields.io/badge/GitHub-AyyanYe-%23181717?style=flat&logo=github)](https://github.com/AyyanYe)
+[![Email](https://img.shields.io/badge/Email-ayyanahmed%40outlook.com-%230078D4?style=flat&logo=microsoft-outlook)](mailto:ayyanahmed@outlook.com)
 
-To deploy this website to a hosting platform like Netlify, Vercel, or GitHub Pages, follow the deployment instructions for your chosen platform. Make sure to update the deployment settings with your custom domain or subdomain, if applicable.
+---
 
-## Contributing
-
-Contributions, bug reports, and feature requests are welcome! If you'd like to contribute to this project, please follow the standard GitHub fork and pull request workflow.
+🔨 **Crafted with precision**  
+This repository demonstrates professional-grade skills in modern web development, including component architecture, performance optimization, and deployment best practices. The codebase prioritizes maintainability and scalability while delivering an engaging user experience.
