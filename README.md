@@ -1,7 +1,7 @@
 # Portfolio Website 🌟
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Open%20Site-brightgreen?style=for-the-badge&logo=netlify)](https://ayyanahmed-portfolio.netlify.app/)
-[![GitHub License](https://img.shields.io/github/license/AyyanYe/Portfolio-Website?style=for-the-badge)](https://github.com/AyyanYe/Portfolio-Website/blob/main/LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-%230078D4?style=for-the-badge)](https://github.com/AyyanYe/Portfolio-Website/blob/main/LICENSE)
 [![React](https://img.shields.io/badge/React-18.2.0-%2361DAFB?style=for-the-badge&logo=react)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-4.4.5-%23646CFF?style=for-the-badge&logo=vite)](https://vitejs.dev/)
 
