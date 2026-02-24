@@ -202,3 +202,49 @@
       -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
   }
 }
+
+/* README modal markdown */
+.readme-content h1,
+.readme-content h2,
+.readme-content h3 {
+  color: #fff;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+}
+.readme-content h1 { font-size: 1.5rem; }
+.readme-content h2 { font-size: 1.25rem; }
+.readme-content h3 { font-size: 1.1rem; }
+.readme-content p { color: #b8b8b8; margin-bottom: 0.75em; line-height: 1.6; }
+.readme-content ul, .readme-content ol { color: #b8b8b8; margin-left: 1.5em; margin-bottom: 0.75em; }
+.readme-content code {
+  background: rgba(255,255,255,0.1);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+  color: #e0e0e0;
+}
+.readme-content pre { background: rgba(0,0,0,0.3); padding: 1em; border-radius: 8px; overflow-x: auto; margin-bottom: 0.75em; }
+.readme-content pre code { background: none; padding: 0; }
+.readme-content a { color: #915eff; text-decoration: underline; }
+.readme-content a:hover { color: #b07eff; }
+.readme-content blockquote { border-left: 4px solid #915eff; padding-left: 1em; margin: 0.75em 0; color: #a0a0a0; }
+.readme-content table { width: 100%; border-collapse: collapse; margin-bottom: 0.75em; color: #b8b8b8; }
+.readme-content th, .readme-content td { border: 1px solid rgba(255,255,255,0.15); padding: 0.5em 0.75em; text-align: left; }
+.readme-content th { color: #fff; font-weight: 600; }
+.readme-content hr { border: none; border-top: 1px solid rgba(255,255,255,0.15); margin: 1em 0; }
+
+/* Blog post markdown (same as readme for consistency) */
+.blog-content h1, .blog-content h2, .blog-content h3 { color: #fff; margin-top: 1.25em; margin-bottom: 0.5em; font-weight: 600; }
+.blog-content h1 { font-size: 1.5rem; }
+.blog-content h2 { font-size: 1.25rem; }
+.blog-content h3 { font-size: 1.1rem; }
+.blog-content p { color: #b8b8b8; margin-bottom: 1em; line-height: 1.7; }
+.blog-content ul, .blog-content ol { color: #b8b8b8; margin-left: 1.5em; margin-bottom: 1em; }
+.blog-content code { background: rgba(255,255,255,0.1); padding: 0.15em 0.4em; border-radius: 4px; font-size: 0.9em; color: #e0e0e0; }
+.blog-content pre { background: rgba(0,0,0,0.3); padding: 1em; border-radius: 8px; overflow-x: auto; margin-bottom: 1em; }
+.blog-content pre code { background: none; padding: 0; }
+.blog-content a { color: #915eff; text-decoration: underline; }
+.blog-content a:hover { color: #b07eff; }
+.blog-content blockquote { border-left: 4px solid #915eff; padding-left: 1em; margin: 1em 0; color: #a0a0a0; }
+.blog-content hr { border: none; border-top: 1px solid rgba(255,255,255,0.15); margin: 1.25em 0; }

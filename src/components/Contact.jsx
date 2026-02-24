@@ -1,20 +1,38 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect, lazy, Suspense } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
 import { styles } from "../styles";
-import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
+const LazyEarthCanvas = lazy(() =>
+  import("./canvas").then((m) => ({ default: m.EarthCanvas }))
+);
+
 const Contact = () => {
   const formRef = useRef();
+  const earthSectionRef = useRef(null);
+  const [showEarth, setShowEarth] = useState(false);
   const [form, setForm] = useState({
     name: "",
     email: "",
     message: "",
   });
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    const el = earthSectionRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setShowEarth(true);
+      },
+      { rootMargin: "100px", threshold: 0.1 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -50,7 +68,7 @@ const Contact = () => {
         setLoading(false)
 
         console.log(error);
-        
+
         alert('Something went wrong.')
       });
   };
@@ -112,10 +130,15 @@ const Contact = () => {
       </motion.div>
 
       <motion.div
+        ref={earthSectionRef}
         variants={slideIn("right", "tween", 0.2, 1)}
         className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
       >
-        <EarthCanvas />
+        {showEarth && (
+          <Suspense fallback={<div className="w-full h-full bg-tertiary/20 rounded-2xl animate-pulse" />}>
+            <LazyEarthCanvas />
+          </Suspense>
+        )}
       </motion.div>
     </div>
   );

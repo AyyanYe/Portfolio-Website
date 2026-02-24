@@ -1,24 +1,24 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import { Tilt } from "react-tilt";
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from "framer-motion";
 
-import { styles } from '../styles';
-import { services } from '../constants';
-import { fadeIn, textVariant } from '../utils/motion';
-import { SectionWrapper } from '../hoc';
+import { styles } from "../styles";
+import { services } from "../constants";
+import { fadeIn, textVariant, fadeInCard, fadeInCardReduced, staggerCardsContainer } from "../utils/motion";
+import { SectionWrapper } from "../hoc";
 
 const ServiceCard = ({ title, icon, index }) => {
+  const reducedMotion = useReducedMotion();
+  const cardVariants = reducedMotion ? fadeInCardReduced() : fadeInCard("right", "spring", 0.75);
+
   return (
     <Tilt
-      options={{
-        max: 45,
-        scale: 1,
-        speed: 450
-      }}
-      className="xs:w-[250px] w-full">
+      options={{ max: 45, scale: 1, speed: 450 }}
+      className="xs:w-[250px] w-full"
+    >
       <motion.div
-        variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
-        className='w-full green-pink-gradient p=[1px] rounded-[20px] shadow-card'
+        variants={cardVariants}
+        className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
       >
         <div
 
@@ -65,11 +65,17 @@ const About = () => {
         and blockchain domains.
       </motion.p>
 
-      <div className='mt-20 flex flex-wrap gap-10'>
+      <motion.div
+        className="mt-20 flex flex-wrap gap-10"
+        variants={staggerCardsContainer(0.1, 0.1)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
-      </div>
+      </motion.div>
     </>
   )
 }

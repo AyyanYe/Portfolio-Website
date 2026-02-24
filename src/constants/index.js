@@ -31,27 +31,16 @@ import {
   // jobit,
   // tripguide,
   threejs,
-  LandingPage,
-  Ballot,
-  aimage,
-  ResApp,
-  littlelemon,
-  Cryp,
 } from "../assets";
 
+export { projects } from "../data/projects";
+
 export const navLinks = [
-  {
-    id: "about",
-    title: "About",
-  },
-  {
-    id: "work",
-    title: "Work",
-  },
-  {
-    id: "contact",
-    title: "Contact",
-  },
+  { id: "about", title: "About" },
+  { id: "work", title: "Work" },
+  { id: "certifications", title: "Certifications" },
+  { id: "contact", title: "Contact" },
+  { id: "blog", title: "Blog", path: "/blog" },
 ];
 
 const services = [
@@ -253,157 +242,4 @@ const testimonials = [
   },
 ];
 
-const projects = [
-  {
-    name: "Cryptography Algorithms in C++",
-    description:
-      "This repository contains C++ implementations of three fundamental cryptography algorithms: DES (Data Encryption Standard), RSA (Rivest–Shamir–Adleman), and Caesar's Cipher.",
-    tags: [
-      {
-        name: "cryptography",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "encryption",
-        color: "green-text-gradient",
-      },
-      {
-        name: "cybersecurity",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "c++",
-        color: "white-text-gradient",
-      },
-    ],
-    image: Cryp,
-    source_code_link: "https://github.com/AyyanYe/Encryption-Project",
-  },
-  {
-    name: "AI SaaS",
-    description:
-      "The app was build using NextJS, it uses OpenAI APIs and Replicate APIs to generate content. Moreover, it uses a Clerk Authentication System, RadixUI Components plus some custom components. Lastly, the database was a Supabase PostgreSQL database and threeJS was used to render 3D components.",
-    tags: [
-      {
-        name: "NextJS",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "TailwindCSS",
-        color: "green-text-gradient",
-      },
-      {
-        name: "OpenAI",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "Prisma",
-        color: "white-text-gradient",
-      },
-    ],
-    image: aimage,
-    source_code_link:
-      "https://github.com/AyyanYe/restaurant-app",
-  },
-  {
-    name: "Little Lemon Booking Website",
-    description:
-      "A booking application integrated into the Little Lemon website, allowing users to make reservations. Implemented using React components and API calls.",
-    tags: [
-      {
-        name: "React",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "API",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "HTML",
-        color: "white-text-gradient",
-      },
-    ],
-    image: littlelemon,
-    source_code_link: "https://github.com/AyyanYe/Project-Capstone",
-  },
-  {
-    name: "Ballot System",
-    description:
-      "A smart contract written in Solidity for a secure and transparent voting system. Designed for elections, surveys, and decision-making processes on the blockchain.",
-    tags: [
-      {
-        name: "solidity",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "hardhat",
-        color: "green-text-gradient",
-      },
-      {
-        name: "smart_contract",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "blockchain",
-        color: "white-text-gradient",
-      },
-    ],
-    image: Ballot,
-    source_code_link:
-      "https://github.com/AyyanYe/Ballot-System--Smart-Contract-",
-  },
-  {
-    name: "Simple Landing Page",
-    description:
-      "A nerfed version of a simple landing page that was designed for a client. I don't usually post things that are owned by my clients, but this client was kind enough to allow me to use this to showcase my skills :)",
-    tags: [
-      {
-        name: "HTML",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "TailwindCSS",
-        color: "green-text-gradient",
-      },
-      {
-        name: "VanillaJS",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: LandingPage,
-    source_code_link:
-      "https://github.com/AyyanYe/manage-landing-page",
-  },
-  {
-    name: "Little Lemon Restaurant App",
-    description:
-      "This restaurant app, built using React Native and Expo, is designed to streamline the dining experience by allowing users to explore restaurants, view menus, and place orders conveniently.",
-    tags: [
-      {
-        name: "React Native",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "CSS3",
-        color: "green-text-gradient",
-      },
-      {
-        name: "JavaScript",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "Expo",
-        color: "white-text-gradient",
-      },
-    ],
-    image: ResApp,
-    source_code_link:
-      "https://github.com/AyyanYe/restaurant-app",
-  },
-];
-
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, testimonials };

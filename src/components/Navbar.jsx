@@ -1,13 +1,19 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 
 import { styles } from '../styles';
 import { navLinks } from '../constants';
 import { logo, menu, close } from '../assets';
 
 const Navbar = () => {
+  const location = useLocation();
   const [active, setActive] = useState('');
   const [toggle, setToggle] = useState(false);
+
+  useEffect(() => {
+    if (location.pathname.startsWith('/blog')) setActive('Blog');
+    else setActive('');
+  }, [location.pathname]);
 
   return (
     <nav
@@ -32,10 +38,16 @@ const Navbar = () => {
           {navLinks.map((link) => (
             <li
               key={link.id}
-              className={`${active === link.title ? "text-white" : "text-secondary"} hover:text-white text-[18px] font-medium cursor-pointer `}
+              className={`${active === link.title ? "text-white" : "text-secondary"} hover:text-white text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(link.title)}
             >
-              <a href={'#' + link.id}>{link.title}</a>
+              {link.path ? (
+                <Link to={link.path} onClick={() => window.scrollTo(0, 0)}>{link.title}</Link>
+              ) : location.pathname === '/' ? (
+                <a href={'#' + link.id}>{link.title}</a>
+              ) : (
+                <Link to={`/#${link.id}`} onClick={() => window.scrollTo(0, 0)}>{link.title}</Link>
+              )}
             </li>
           ))}
         </ul>
@@ -52,13 +64,19 @@ const Navbar = () => {
               {navLinks.map((link) => (
                 <li
                   key={link.id}
-                  className={`${active === link.title ? "text-white" : "text-secondary"} font-poppins font-medium cursor-pointer text-[16px] `}
+                  className={`${active === link.title ? "text-white" : "text-secondary"} font-poppins font-medium cursor-pointer text-[16px]`}
                   onClick={() => {
                     setToggle(!toggle);
                     setActive(link.title);
                   }}
                 >
-                  <a href={'#' + link.id}>{link.title}</a>
+                  {link.path ? (
+                    <Link to={link.path} onClick={() => window.scrollTo(0, 0)}>{link.title}</Link>
+                  ) : location.pathname === '/' ? (
+                    <a href={'#' + link.id}>{link.title}</a>
+                  ) : (
+                    <Link to={`/#${link.id}`} onClick={() => window.scrollTo(0, 0)}>{link.title}</Link>
+                  )}
                 </li>
               ))}
             </ul>

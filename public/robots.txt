@@ -1,0 +1,6 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Sitemap (replace with your production URL)
+Sitemap: https://ayyanahmed.dev/sitemap.xml
